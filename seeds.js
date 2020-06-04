@@ -18,17 +18,19 @@ var data = [
     image: "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description: "blah blah blah"
   }
-]
+];
 
 function seedDB(){
   //remove all campgrounds
   Campground.remove({}, function(err){
     if (err) {
       console.log(err);
-    } console.log("removed campground!");
+    } else {
+      console.log("removed campground!");
+    }
     //add a few campgroundSchema
   data.forEach(function(seed){
-    Campground.create(seed,function(err, data){
+    Campground.create(seed,function(err, campground){
       if(err){
         console.log(err);
       } else {
@@ -36,7 +38,7 @@ function seedDB(){
         //create a comment
         Comment.create(
           {
-          text: "This place is great, but i wish there was internet.",
+      text: "This place is great, but i wish there was internet.",
           author: "Homer"
         },function(err, comment){
           if (err) {
