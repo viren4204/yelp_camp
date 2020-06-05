@@ -67,16 +67,27 @@ app.get("/campgrounds/:id", function(req, res){
 //====================================
 //COMMENTS ROUTES
 //====================================
-app.get("/campgrounds/:id/comments/new", function(req, res){
-  //find campground by Id
-  Campground.findById(req.params.id, function(err, campground){
+// app.get("/campgrounds/:id/comments/new", function(req, res){
+//   //find campground by Id
+//   Campground.findById(req.params.id, function(err, campground){
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       res.render("comments/new", {campground: campground});
+//     }
+//   })
+// });
+
+app.get('/campgrounds/:id/comments/new', (req, res) => {
+  Campground.findById(req.params.id, (err, campground) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("comments/new", {campground: campground});
+      res.render('comments/new', { campground });
     }
-  })
+  });
 });
+
 
 app.post("/campgrounds/:id/comments", function(req, res){
   Campground.findById(req.params.id, function(err, campground){
