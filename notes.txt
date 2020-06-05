@@ -1,0 +1,29 @@
+limit in each session -1
+
+unit-31
+
+chap- 303/ 364 (159 postponed)
+funtion inside of an object is called method
+
+resurch return statements
+research about javascript design patterns
+research about ajax
+
+
+---------------------------------------------------------------------
+android app dev
+ 004
+----------------------------------------------------------------
+1. learnenough  
+	a. command line
+	b. text editor
+	c. git & github
+2. complete the current tutorial
+3. crash courese on 
+	a. react
+	b.wordpress
+
+4. reviese javascript 
+5. reviese node js.
+
+
